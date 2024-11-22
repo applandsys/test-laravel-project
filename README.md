@@ -32,6 +32,12 @@ The above migration is created. now need to run the following command when initi
 ### Version info
 ``` php artisan --version ``` = Laravel Framework 11.33.2
 
+### Create Repository
+``` php artisan make:interface Repositories/CategoryRepositoryInterface ```
+``` php artisan make:class Repositories/CategoryRepository ```
+
+### Controller
+``` php artisan make:controller ProductController ```
 
 ### Help source
 
