@@ -22,9 +22,9 @@ class ProductSeeder extends Seeder
     public function run(): void
     {
         Product::insert([
-            ['name' => 'Product 1', 'slug' => 'product-1', 'price' => 100.00,'created_at' =>  $this->time ],
-            ['name' => 'Product 2', 'slug' => 'product-2', 'price' => 150.00,'created_at' =>  $this->time ],
-            ['name' => 'Product 3', 'slug' => 'product-3', 'price' => 200.00,'created_at' =>  $this->time ],
+            ['name' => 'Product 1', 'slug' => 'product-1', 'price' => 100.00, 'created_at' =>  $this->time ],
+            ['name' => 'Product 2', 'slug' => 'product-2', 'price' => 150.00, 'created_at' =>  $this->time ],
+            ['name' => 'Product 3', 'slug' => 'product-3', 'price' => 200.00, 'created_at' =>  $this->time ],
         ]);
     }
 }

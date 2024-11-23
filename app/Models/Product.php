@@ -9,10 +9,19 @@ class Product extends Model
 {
     protected $fillable = ['name', 'slug', 'price'];
 
+
+     /**
+     * Many-to-Many relationship with Category model.
+     */
     public function categories(): BelongsToMany
     {
-        return $this->belongsToMany(Category::class, 'product_category');
+        return $this->belongsToMany(Category::class, 'product_categories', 'product_id', 'category_id');
     }
+
+    public function orderDetails()
+{
+    return $this->hasMany(OrderDetail::class, 'product_id');
+}
 
     public function reviews(): HasMany
     {
