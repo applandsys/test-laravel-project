@@ -16,7 +16,7 @@
 
 - [x] run the following command to run the project
   ``` php artisan serve ```
-- [x] the project will run in 127
+- [x] the project will run in [Run Here](http://127.0.0.1:8000/category/laptops/products?sort=top_rated)
 
 
 # Process Followed over the project
