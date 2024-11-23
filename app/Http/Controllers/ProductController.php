@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use App\Repositories\ProductRepositoryInterface;
 
-class ProductController extends Controller
+class ProductController extends BaseAction
 {
     protected ProductRepositoryInterface $productRepository;
 
@@ -14,12 +15,17 @@ class ProductController extends Controller
         $this->productRepository = $productRepository;
     }
 
-    public function getProducts($slug, Request $request)
+    /**
+     * Get the Product with sort order
+     * @params String $slug , Request $request
+     * $slug is the query string for sort order
+     */
+    public function getProducts(string $slug, Request $request): JsonResponse
     {
         $category = $this->productRepository->getCategoryBySlug($slug);
 
         if (!$category) {
-            return response()->json(['error' => 'Category not found'], 404);
+            return $this->responseDefault(['error' => 'Category not found'], 404);
         }
 
         $products = $this->productRepository->getCategoryProducts(
@@ -27,6 +33,6 @@ class ProductController extends Controller
             $request->query('sort', null)
         );
 
-        return response()->json($products);
+        return $this->responseDefault($products);
     }
 }
