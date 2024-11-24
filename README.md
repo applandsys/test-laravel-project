@@ -22,7 +22,11 @@
 
   ``` php artisan serve ```
 
-- [x] the project will run in [Run Here](http://127.0.0.1:8000/category/laptops/products?sort=top_rated)
+- [x] the project will run in 
+- [Best Sell](http://127.0.0.1:8000/category/laptops/products?sort=best_sell)
+- [Top Rated](http://127.0.0.1:8000/category/laptops/products?sort=top_rated)
+- [Price High to Low](http://127.0.0.1:8000/category/laptops/products?sort=price_high_to_low)
+- [Price Low to High](http://127.0.0.1:8000/category/laptops/products?sort=price_low_to_high)
 
 
 # Process Followed over the project
@@ -67,7 +71,8 @@ The above migration is created. now need to run the following command when initi
 ``` php artisan make:controller ProductController ```
 ``` php artisan make:controller BaseAction ```
 
-### Help source
+### API Resource
+``` php artisan make:resource ProductResource ```
 
 
 
