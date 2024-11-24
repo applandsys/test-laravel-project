@@ -75,4 +75,37 @@ The above migration is created. now need to run the following command when initi
 ``` php artisan make:resource ProductResource ```
 
 
+## List of Files Added and Modified
+```routes/web.php```
+
+```app/Http/Controllers/BaseAction.php```
+```app/Http/Controllers/ProductController.php```
+
+#### API Resource and Collection
+```app/Http/Resources/ProductCollection.php```
+```app/Http/Resources/ProductResource.php```
+
+
+#### Models
+```app/Models/Category.php```
+```app/Models/Order.php```
+```app/Models/Category.php```
+```app/Models/OrderDetail.php```
+```app/Models/Product.php```
+```app/Models/ProductCategory.php```
+```app/Models/ProductReview.php```
+
+#### Repository
+```app/Repositories/ProductRepository.php```
+```app/Repositories/ProductRepositoryInterface.php```
+
+```app/Providers/AppServiceProvider.php```
+
+#### Migrations
+```database/migrations``` <!-- All migrations -->
+
+#### seeders
+```database/seeders``` <!-- All seeders -->
+
+
 
