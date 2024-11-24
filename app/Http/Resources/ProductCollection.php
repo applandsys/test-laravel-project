@@ -23,6 +23,12 @@ class ProductCollection extends ResourceCollection
                         'price' => $product->price,
                         'total_sales' => $product->total_sales,
                         'reviews_avg_rating' => $product->reviews_avg_rating,
+                        'categories' => $product->categories,
+//                        'parent_category_id' => $product->categories->map(function ($category) {
+//                            return $category->parent->id;
+//                        }),
+                        'order_detail' => $product->orderDetails,
+                        'reviews' => $product->reviews,
                     ];
                 }),
                 'first_page_url' => $this->url(1),

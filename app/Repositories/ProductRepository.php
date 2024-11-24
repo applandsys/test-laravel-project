@@ -31,7 +31,7 @@ class ProductRepository implements ProductRepositoryInterface
         $products = $category->products();
         $product_query =  $products->withCount(['orderDetails as total_sales' => function ($query) {
             $query->select(DB::raw('SUM(quantity)'));
-        }])->withAvg('reviews', 'rating');
+        }])->withAvg('reviews', 'rating')->with('categories');
 
         // Apply sorting
         switch ($sort) {
